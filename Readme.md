@@ -1,4 +1,4 @@
-This is a cheatsheet for commands and tools commonly used in ethical hacking.
+This is a cheatsheet for commands and tools commonly used for ethical hacking.
 
 1) Change Mac      : a) ifconfig ath0 down b) ifconfig ath0 hw ether <new_mac> c) ifconfig ath0 up
 
